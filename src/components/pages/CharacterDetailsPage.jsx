@@ -26,7 +26,7 @@ function CharacterDetailsPage({ findCharacter }) {
       <article className="detail_card">
         <img
           className="detail_image"
-          src={characterFound.image || "/hogwarts-placeholder.jpg"}
+          src={characterFound.image || "https://placehold.co/400x400/0b0a0a/d4af37?text=Sin+imagen"}
           alt={characterFound.name}
         />
 

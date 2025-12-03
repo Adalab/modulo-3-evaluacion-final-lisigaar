@@ -4,13 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import ListingPage from "./pages/ListingPage";
 
-
-
 function App() {
   const [allCharacters, setAllCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const [filterName, setFilterName] = useState("");
+  const [filterHouse, setFilterHouse] = useState("Gryffindor");
 
   useEffect(() => {
     fetch("https://hp-api.onrender.com/api/characters")
@@ -42,7 +41,11 @@ function App() {
 
   const filteredCharacters = allCharacters.filter((eachCharacter) =>
     eachCharacter.name.toLowerCase().includes(filterName.toLowerCase())
-  );
+  )
+  .filter((eachCharacter) =>
+    eachCharacter.house.toLowerCase().includes(filterHouse.toLowerCase())
+  )  
+  ;
 
   return (
     <div className="app">
@@ -57,6 +60,8 @@ function App() {
               <ListingPage
                 filterName={filterName}
                 setFilterName={setFilterName}
+                filterHouse={filterHouse}
+                setFilterHouse={setFilterHouse}
                 loading={loading}
                 filteredCharacters={filteredCharacters}
               />

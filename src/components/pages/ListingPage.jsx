@@ -3,12 +3,19 @@ import CharactersList from "../listing/CharactersList";
 function ListingPage({
   filterName,
   setFilterName,
+  filterHouse,
+  setFilterHouse,
   loading,
   filteredCharacters,
 }) {
   const handleFilterName = (ev) => {
     setFilterName(ev.target.value);
   };
+
+  const handleFilterHouse = (ev) => {
+    setFilterHouse(ev.target.value || "Gryffindor");
+  };
+
 
   return (
     <>
@@ -28,7 +35,7 @@ function ListingPage({
 
           <div>
             <label htmlFor="filterHouse">Selecciona la casa:</label>
-            <select className="filters_input_select" id="filterHouse">
+            <select className="filters_input_select" id="filterHouse" onChange={handleFilterHouse} value={filterHouse || "Gryffindor"}>
               <option value="Gryffindor">Gryffindor</option>
               <option value="Slytherin">Slytherin</option>
               <option value="Hufflepuff">Hufflepuff</option>

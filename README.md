@@ -47,5 +47,4 @@ Para invocar el proyecto en tu máquina o en la web, sigue estas instrucciones:
 ### 1. Trae la Varita (Clonar)
 
 ```bash
-# Recuerda crear y clonar el nuevo repositorio desde GitHub Classroom
-git clone [https://beta.adalab.es/modulo-3-evaluacion-final-lisigaar/]
+https://beta.adalab.es/modulo-3-evaluacion-final-lisigaar/

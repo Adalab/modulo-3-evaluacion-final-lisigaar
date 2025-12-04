@@ -17,11 +17,8 @@ function ListingPage({
   };
 
   const handleResetFilters = (ev) => {
-    // Evita el envío del formulario
     ev.preventDefault();
-    // Limpia el filtro de nombre
     setFilterName("");
-    // Reinicia la casa a su valor inicial
     setFilterHouse("Gryffindor");
   };
 

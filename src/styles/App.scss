@@ -365,19 +365,19 @@ body {
 .detail_header {
   display: flex; 
   align-items: center; 
-  gap: 5px; /* Espacio entre el nombre y el escudo */
-  margin-bottom: 10px; /* Espacio debajo del encabezado */
+  gap: 5px; 
+  margin-bottom: 10px; 
 }
 
 /* Estilo para el escudo */
 .detail_house_logo {
-  width: 60px; /* Ajusta el tamaño según lo necesites */
+  width: 60px; 
   height: 60px;
-  object-fit: contain; /* Asegura que la imagen no se recorte */
+  object-fit: contain; 
 }
 
 /* Estilo para el nombre */
 .detail_name {
-  margin: 0; /* Elimina el margen por defecto del h1 para que quede alineado */
+  margin: 0; 
 }
 

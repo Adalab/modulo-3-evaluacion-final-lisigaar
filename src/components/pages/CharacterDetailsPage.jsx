@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 
-// 1. Mapeo de escudos (Idealmente, ponlo en un archivo separado para un código más limpio)
 const houseLogos = {
   Gryffindor: "./images/gryffindor.png",
   Slytherin: "./images/slytherin.png",

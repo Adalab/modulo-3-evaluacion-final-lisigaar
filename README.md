@@ -40,11 +40,7 @@ Al hacer clic en cualquier tarjeta, viajas a la vista de detalle. Aquí encontra
 
 ---
 
-## 🪄 Cómo Lanzar el Encantamiento (Instalación y Despliegue)
-
-Para invocar el proyecto en tu máquina o en la web, sigue estas instrucciones:
-
-### 1. Trae la Varita (Clonar)
+## 🪄 Cómo Lanzar el Encantamiento.  Trae la Varita (Clonar)
 
 ```bash
 https://beta.adalab.es/modulo-3-evaluacion-final-lisigaar/

@@ -13,9 +13,17 @@ function ListingPage({
   };
 
   const handleFilterHouse = (ev) => {
-    setFilterHouse(ev.target.value || "Gryffindor");
+    setFilterHouse(ev.target.value);
   };
 
+  const handleResetFilters = (ev) => {
+    // Evita el envío del formulario
+    ev.preventDefault();
+    // Limpia el filtro de nombre
+    setFilterName("");
+    // Reinicia la casa a su valor inicial
+    setFilterHouse("Gryffindor");
+  };
 
   return (
     <>
@@ -35,13 +43,25 @@ function ListingPage({
 
           <div>
             <label htmlFor="filterHouse">Selecciona la casa:</label>
-            <select className="filters_input_select" id="filterHouse" onChange={handleFilterHouse} value={filterHouse || "Gryffindor"}>
+            <select
+              className="filters_input_select"
+              id="filterHouse"
+              onChange={handleFilterHouse}
+              value={filterHouse || "Gryffindor"}
+            >
               <option value="Gryffindor">Gryffindor</option>
               <option value="Slytherin">Slytherin</option>
               <option value="Hufflepuff">Hufflepuff</option>
               <option value="Ravenclaw">Ravenclaw</option>
             </select>
           </div>
+
+          <button
+            type="button"
+            className="filters_reset_btn"
+            onClick={handleResetFilters}
+          >Limpiar 🧹
+          </button>
         </fieldset>
       </form>
 

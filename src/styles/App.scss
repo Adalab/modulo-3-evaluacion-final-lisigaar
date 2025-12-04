@@ -3,7 +3,7 @@
 body {
   margin: 0;
   background-color: #0b0a0a;
-  font-family: "IM Fell English", serif; /* tipografía Hogwarts para texto */
+  font-family: "IM Fell English", serif; 
   color: #f4e9c5;
 }
 
@@ -44,8 +44,6 @@ body {
   border: 1px solid #3b3221;
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
   text-align: center;
-
-
   
 
   label {
@@ -74,7 +72,6 @@ body {
   }
 }
 
-/* Vista móvil: filtros en columna */
 .filters_section {
   display: flex;
   flex-direction: column;
@@ -87,14 +84,58 @@ body {
   outline: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 18px;
 }
 
-/* Vista desktop: filtros en fila centrada */
 @media (min-width: 768px) {
   .filters_section {
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    gap: 20px; 
+    align-items: flex-end; 
+  }
+}
+
+/* ------------------------------
+  Botón de reset
+------------------------------ */
+.filters fieldset .filters_reset_btn {
+ 
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;       
+    text-transform: none !important;
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #d4af37;
+    border: 1.5px solid #4c3d1f;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+.filters_reset_btn:hover {
+  background-color: #d4af37;
+  color: #0b0a0a;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+
+
+@media (min-width: 768px) {
+  .filters fieldset {
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-end; 
+    gap: 20px;
+  }
+
+  .filters_reset_btn {
+    align-self: flex-end; 
   }
 }
 
@@ -111,7 +152,7 @@ body {
   grid-template-columns: repeat(1, 1fr);
   gap: 25px;
 
-  /* Desktop: 4 columnas */
+
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -120,8 +161,6 @@ body {
 /* ------------------------------
    Tarjeta de personaje
 ------------------------------ */
-
-/* Link de la tarjeta: quitar subrayado y color azul */
 .card__link {
   text-decoration: none;
   color: inherit;
@@ -143,11 +182,11 @@ body {
 }
 
 .character_image  {
-  width: 260px;        /* igual que detail_image */
-  height: 340px;       /* igual que detail_image */
-  object-fit: cover;   /* cubre el contenedor manteniendo proporción */
+  width: 260px;       
+  height: 340px;       
+  object-fit: cover;  
   border-radius: 12px;
-  border: 3px solid  #d4af37; /* borde un poco más discreto que detalle */
+  border: 3px solid  #d4af37; 
   margin: 0 auto;
   display: block;
 }
@@ -168,7 +207,6 @@ body {
   text-align: center;
 }
 
-/* Imagen placeholder (sin foto) */
 .character_image.placeholder {
   width: 260px;
   height: 340px;
@@ -181,7 +219,7 @@ body {
   font-family: "Cinzel", serif;
   font-size: 1.2rem;
   text-align: center;
-  text-decoration: none; /* quitar subrayado */
+  text-decoration: none; 
   margin: 0 auto;
 }
 /* ------------------------------
@@ -319,3 +357,27 @@ body {
     text-align: left;
   }
 }
+
+/* ------------------------------
+   Escudo al lado del nombre
+------------------------------ */
+
+.detail_header {
+  display: flex; 
+  align-items: center; 
+  gap: 5px; /* Espacio entre el nombre y el escudo */
+  margin-bottom: 10px; /* Espacio debajo del encabezado */
+}
+
+/* Estilo para el escudo */
+.detail_house_logo {
+  width: 60px; /* Ajusta el tamaño según lo necesites */
+  height: 60px;
+  object-fit: contain; /* Asegura que la imagen no se recorte */
+}
+
+/* Estilo para el nombre */
+.detail_name {
+  margin: 0; /* Elimina el margen por defecto del h1 para que quede alineado */
+}
+

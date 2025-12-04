@@ -2,10 +2,10 @@ import { useParams, Link } from "react-router-dom";
 
 // 1. Mapeo de escudos (Idealmente, ponlo en un archivo separado para un código más limpio)
 const houseLogos = {
-  Gryffindor: "/gryffindor.png",
-  Slytherin: "/slytherin.png",
-  Hufflepuff: "/hufflepuff.png",
-  Ravenclaw: "/ravenclaw.png",
+  Gryffindor: "/images/gryffindor.png",
+  Slytherin: "/images/slytherin.png",
+  Hufflepuff: "/images/hufflepuff.png",
+  Ravenclaw: "/images/ravenclaw.png",
 };
 
 function CharacterDetailsPage({ findCharacter }) {
